@@ -1,1 +1,16 @@
 /* you can add any styles you think could improve user's experience */
+body {
+  background-color: lightgreen;
+  color: #fff;
+  font-size: 2em;
+}
+
+li {
+  list-style: none;
+  float: left;
+  margin-right: 1em;
+}
+
+ul {
+  text-align: center;
+}

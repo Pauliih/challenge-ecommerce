@@ -3,26 +3,12 @@ import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import { createStore } from 'redux';
 import { Provider, connect } from 'react-redux';
+// Components
+import Total from './Total';
+import ListItems from './ListItems';
 
 // const App = ({ message }) => 
 //   <div>{ message }</div>;
-
-// React component for Total Button
-class Total extends Component {
-  render() {
-    const { value, onIncreaseClick } = this.props
-    return (
-      <div>
-        <button onClick={onIncreaseClick}>Total: <span>{value}</span></button>
-      </div>
-    )
-  }
-}
-
-Total.propTypes = {
-  value: PropTypes.number.isRequired,
-  onIncreaseClick: PropTypes.func.isRequired
-}
 
 // Action
 const increaseAction = { type: 'increase' }
