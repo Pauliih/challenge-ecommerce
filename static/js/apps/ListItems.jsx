@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import Items from './Items';
 
-class ListItems extends Component {
+export default class ListItems extends Component {
   constructor(props) {
     super(props);
     // Estado inicial
@@ -14,7 +14,7 @@ class ListItems extends Component {
   componentWillMount() {
     let items = []; // Array de items
     // Llamar a la data
-    fetch('items').then(item => {
+    fetch('/items').then(item => {
       return item.json();
     }).then(item => {
       items = item.catalog;
@@ -36,11 +36,12 @@ class ListItems extends Component {
       <ul>
         {/* Operador ternario */}
         {this.state.wait ? <p>Wait a moment...</p> :
-          this.state.data.map(element => 
-            <li key={element.id}>
-              <img src={element.imageURL} alt={element.name} key={element.id}/>
+          this.state.data.map((element, index) => 
+            <li key={index}>
+              <img src={element.imageURL} alt={element.name} key={index}/>
               <p key={element.name}>{element.name}</p>
               <p><span>{element.currency}</span>{element.price}</p>
+              <button className="add-item">Add to cart</button>
             </li>
           )
         }
@@ -48,5 +49,3 @@ class ListItems extends Component {
     );
   }
 }
-
-export default ListItems;

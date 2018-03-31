@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/aether7/adessa-frontend-test#readme",
   "dependencies": {
+    "bootstrap": "^4.0.0",
     "consolidate": "^0.14.5",
     "express": "^4.14.0",
     "handlebars": "^4.0.6",

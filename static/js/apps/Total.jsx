@@ -11,7 +11,7 @@ export default class Total extends Component {
     const { value, onIncreaseClick } = this.props
     return (
       <div>
-        <button onClick={onIncreaseClick}>Total: <span>{value}</span></button>
+        <button className="btn-total" onClick={onIncreaseClick}>Total: $<span>{value}</span></button>
         <ListItems />
       </div>
     )

@@ -1,8 +1,16 @@
 /* you can add any styles you think could improve user's experience */
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
 body {
-  background-color: lightgreen;
-  color: #fff;
-  font-size: 2em;
+  background-color: #fff ;
+  color: greenyellow;
+  font-family: 'Lato', sans-serif;
+  font-size: 1em;
+}
+
+h1 {
+  font-size: 3em;
+  
 }
 
 li {
@@ -13,4 +21,30 @@ li {
 
 ul {
   text-align: center;
+}
+li {
+  padding: 1em;
+  transition: all 0.2s ease-in-out;
+}
+li:hover {
+  transform: scale(1.1);
+}
+
+.btn-total {
+  background-color: gray;
+  color: #fff;
+}
+.add-item {
+  background-color: greenyellow;
+  color: #fff;
+  cursor: pointer;
+}
+
+.add-item:hover {
+  background-color: lightgreen;
+}
+
+button {
+  padding: 1em;
+  border-radius: 18%;
 }
